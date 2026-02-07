@@ -1,5 +1,7 @@
 # 🚀 ReachInbox Hiring Assignment - Full-stack Email Scheduler
 
+### 🎥 [Click Here to Watch the Demo Video](https://drive.google.com/file/d/1_vxSCIWObxlm736aYsrZa7a3-KrDEHZh/view?usp=sharing)
+
 A production-grade distributed email scheduler built with **Express, BullMQ, Redis, and Next.js**.
 
 ## 🚀 Unique Features (Bonus)
