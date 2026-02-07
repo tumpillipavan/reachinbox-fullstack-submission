@@ -75,7 +75,7 @@ npm run dev
 # Client will start on http://localhost:3000
 ```
 
-## 🧪 Verification Steps (For Reviewers)
+## 🧪 Verification Steps (For Video)
 
 1. **Persistence Test**: Schedule an email, stop the server, wait for the schedule time, restart server. Watch it send immediately.
 2. **Rate Limit Test**: Set a low hourly limit (e.g., 2), schedule 5 emails. Observe 2 sending and 3 rescheduling in the backend logs.
