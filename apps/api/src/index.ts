@@ -11,9 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const connection = new IORedis({
-    host: process.env.REDIS_HOST || 'localhost',
-    port: parseInt(process.env.REDIS_PORT || '6379'),
+const connection = new IORedis(process.env.REDIS_URL as string, {
     maxRetriesPerRequest: null,
 });
 
