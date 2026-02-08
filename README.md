@@ -79,7 +79,18 @@ npm run dev
 # Client will start on http://localhost:3000
 ```
 
-## 🧪 Verification Steps (For Video)
+## 🧪 Verification & Testing Guide
 
-1. **Persistence Test**: Schedule an email, stop the server, wait for the schedule time, restart server. Watch it send immediately.
-2. **Rate Limit Test**: Set a low hourly limit (e.g., 2), schedule 5 emails. Observe 2 sending and 3 rescheduling in the backend logs.
+To verify the system's reliability and rate-limiting features, follow these steps:
+
+1.  **Persistence Test:**
+    * Schedule an email for 1 minute in the future.
+    * Stop the backend server immediately (`Ctrl + C`).
+    * Wait for the scheduled time to pass.
+    * Restart the server (`npm run dev`).
+    * **Result:** You will see the email send immediately upon restart, proving the Redis queue persistence.
+
+2.  **Rate Limit Test:**
+    * Set the hourly limit to `2` in the `.env` file (or use the default if configured).
+    * Schedule a campaign with 5 emails.
+    * **Result:** You will observe 2 emails sending immediately in the logs, while the remaining 3 are automatically rescheduled for the next hour window.
